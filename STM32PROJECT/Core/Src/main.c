@@ -90,7 +90,7 @@ int main(void)
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT (& htim2 ) ;
-  setTimer(0, 1000);
+  setTimer(0, 500);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -102,7 +102,7 @@ int main(void)
 //		 Ex1_run();
 //	  }
 	  if(isTimerExpired(0)==1){
-		  setTimer(0, 1000);
+		  setTimer(0, 500);
 		  Ex1_run();
 	  }
     /* USER CODE END WHILE */

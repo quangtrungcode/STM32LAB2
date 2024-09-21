@@ -50,14 +50,12 @@ void Ex1_run(){
 	if(index_led<=1){
 		HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SET);
 		HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, RESET);
-		//HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SET);
-		display7SEG(2);
+		display7SEG(1);
 	}
 	if(index_led>=2){
 		HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, SET);
 		HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, RESET);
-	//	HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, SET);
-		display7SEG(3);
+		display7SEG(2);
 	}
 }
 void setTimer(int index, int value){

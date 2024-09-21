@@ -112,8 +112,8 @@ int main(void)
   HAL_TIM_Base_Start_IT (& htim2 ) ;
  8000160:	480a      	ldr	r0, [pc, #40]	; (800018c <main+0x40>)
  8000162:	f001 fa09 	bl	8001578 <HAL_TIM_Base_Start_IT>
-  setTimer(0, 1000);
- 8000166:	f44f 717a 	mov.w	r1, #1000	; 0x3e8
+  setTimer(0, 500);
+ 8000166:	f44f 71fa 	mov.w	r1, #500	; 0x1f4
  800016a:	2000      	movs	r0, #0
  800016c:	f000 f9b8 	bl	80004e0 <setTimer>
   {
@@ -127,8 +127,8 @@ int main(void)
  8000176:	4603      	mov	r3, r0
  8000178:	2b01      	cmp	r3, #1
  800017a:	d1f9      	bne.n	8000170 <main+0x24>
-		  setTimer(0, 1000);
- 800017c:	f44f 717a 	mov.w	r1, #1000	; 0x3e8
+		  setTimer(0, 500);
+ 800017c:	f44f 71fa 	mov.w	r1, #500	; 0x1f4
  8000180:	2000      	movs	r0, #0
  8000182:	f000 f9ad 	bl	80004e0 <setTimer>
 		  Ex1_run();
@@ -650,9 +650,8 @@ void Ex1_run(){
  80004a4:	2140      	movs	r1, #64	; 0x40
  80004a6:	480d      	ldr	r0, [pc, #52]	; (80004dc <Ex1_run+0x68>)
  80004a8:	f000 fc22 	bl	8000cf0 <HAL_GPIO_WritePin>
-		//HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SET);
-		display7SEG(2);
- 80004ac:	2002      	movs	r0, #2
+		display7SEG(1);
+ 80004ac:	2001      	movs	r0, #1
  80004ae:	f7ff ff59 	bl	8000364 <display7SEG>
 	}
 	if(index_led>=2){
@@ -670,9 +669,8 @@ void Ex1_run(){
  80004c6:	2180      	movs	r1, #128	; 0x80
  80004c8:	4804      	ldr	r0, [pc, #16]	; (80004dc <Ex1_run+0x68>)
  80004ca:	f000 fc11 	bl	8000cf0 <HAL_GPIO_WritePin>
-	//	HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, SET);
-		display7SEG(3);
- 80004ce:	2003      	movs	r0, #3
+		display7SEG(2);
+ 80004ce:	2002      	movs	r0, #2
  80004d0:	f7ff ff48 	bl	8000364 <display7SEG>
 	}
 }

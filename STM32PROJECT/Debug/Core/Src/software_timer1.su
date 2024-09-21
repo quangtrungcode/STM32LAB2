@@ -1,5 +1,5 @@
 software_timer1.c:26:6:display7SEG	32	static
 software_timer1.c:47:6:Ex1_run	8	static
-software_timer1.c:63:6:setTimer	16	static
-software_timer1.c:68:5:isTimerExpired	16	static
-software_timer1.c:76:6:timerRun	16	static
+software_timer1.c:61:6:setTimer	16	static
+software_timer1.c:66:5:isTimerExpired	16	static
+software_timer1.c:74:6:timerRun	16	static
