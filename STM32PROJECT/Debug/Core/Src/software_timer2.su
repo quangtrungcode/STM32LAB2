@@ -1,0 +1,6 @@
+software_timer2.c:17:6:display7SEG	32	static
+software_timer2.c:38:6:Ex2_run	8	static
+software_timer2.c:74:6:led_blinky	8	static
+software_timer2.c:80:6:setTimer	16	static
+software_timer2.c:85:5:isTimerExpired	16	static
+software_timer2.c:93:6:timerRun	16	static
