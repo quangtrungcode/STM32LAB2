@@ -1,0 +1,7 @@
+software_timer4.c:18:7:display7SEG	32	static
+software_timer4.c:39:7:update7SEG	16	static
+software_timer4.c:81:7:led_blinky	8	static
+software_timer4.c:87:6:Ex4_run	8	static
+software_timer4.c:91:6:setTimer	16	static
+software_timer4.c:96:5:isTimerExpired	16	static
+software_timer4.c:104:6:timerRun	16	static
