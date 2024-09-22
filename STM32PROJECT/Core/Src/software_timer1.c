@@ -8,7 +8,7 @@
 #define MAX_COUNTER 10
 #define TIMER_TICK 10
 
-int counter=0;
+//int counter=0;
 int timer_counter[MAX_COUNTER];
 int timer_flag[MAX_COUNTER];
 int index_led=0;
