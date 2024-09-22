@@ -792,26 +792,26 @@ const int MAX_LED = 4;
 void Ex3_run(){
  80005d0:	b580      	push	{r7, lr}
  80005d2:	af00      	add	r7, sp, #0
-	if(index_led>=4) index_led=0;
+	if(index_led>=MAX_LED) index_led=0;
  80005d4:	4b08      	ldr	r3, [pc, #32]	; (80005f8 <Ex3_run+0x28>)
  80005d6:	681b      	ldr	r3, [r3, #0]
- 80005d8:	2b03      	cmp	r3, #3
- 80005da:	dd02      	ble.n	80005e2 <Ex3_run+0x12>
- 80005dc:	4b06      	ldr	r3, [pc, #24]	; (80005f8 <Ex3_run+0x28>)
- 80005de:	2200      	movs	r2, #0
- 80005e0:	601a      	str	r2, [r3, #0]
+ 80005d8:	2204      	movs	r2, #4
+ 80005da:	4293      	cmp	r3, r2
+ 80005dc:	db02      	blt.n	80005e4 <Ex3_run+0x14>
+ 80005de:	4b06      	ldr	r3, [pc, #24]	; (80005f8 <Ex3_run+0x28>)
+ 80005e0:	2200      	movs	r2, #0
+ 80005e2:	601a      	str	r2, [r3, #0]
 		update7SEG(index_led++);
- 80005e2:	4b05      	ldr	r3, [pc, #20]	; (80005f8 <Ex3_run+0x28>)
- 80005e4:	681b      	ldr	r3, [r3, #0]
- 80005e6:	1c5a      	adds	r2, r3, #1
- 80005e8:	4903      	ldr	r1, [pc, #12]	; (80005f8 <Ex3_run+0x28>)
- 80005ea:	600a      	str	r2, [r1, #0]
- 80005ec:	4618      	mov	r0, r3
- 80005ee:	f7ff ff43 	bl	8000478 <update7SEG>
+ 80005e4:	4b04      	ldr	r3, [pc, #16]	; (80005f8 <Ex3_run+0x28>)
+ 80005e6:	681b      	ldr	r3, [r3, #0]
+ 80005e8:	1c5a      	adds	r2, r3, #1
+ 80005ea:	4903      	ldr	r1, [pc, #12]	; (80005f8 <Ex3_run+0x28>)
+ 80005ec:	600a      	str	r2, [r1, #0]
+ 80005ee:	4618      	mov	r0, r3
+ 80005f0:	f7ff ff42 	bl	8000478 <update7SEG>
 }
- 80005f2:	bf00      	nop
- 80005f4:	bd80      	pop	{r7, pc}
- 80005f6:	bf00      	nop
+ 80005f4:	bf00      	nop
+ 80005f6:	bd80      	pop	{r7, pc}
  80005f8:	20000038 	.word	0x20000038
 
 080005fc <setTimer>:

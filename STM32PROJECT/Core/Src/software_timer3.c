@@ -4,7 +4,7 @@
  *  Created on: 21 thg 9, 2024
  *      Author: ADMIN
  */
-#include <software_timer3.h>
+#include "software_timer3.h"
 #define MAX_COUNTER 10
 #define TIMER_TICK 10
 
@@ -79,7 +79,7 @@ const int MAX_LED = 4;
 	 }
  }
 void Ex3_run(){
-	if(index_led>=4) index_led=0;
+	if(index_led>=MAX_LED) index_led=0;
 		update7SEG(index_led++);
 }
 
