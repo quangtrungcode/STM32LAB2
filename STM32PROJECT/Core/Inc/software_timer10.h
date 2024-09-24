@@ -16,7 +16,7 @@ int isTimerExpired(int index);
 
 void timerRun();
 void updateLEDMatrix (int index );
-void Ex9_run();
+void Ex10_run();
 void displayMatrix(uint8_t num);
 void shiftColLeft();
 void shiftColRight();

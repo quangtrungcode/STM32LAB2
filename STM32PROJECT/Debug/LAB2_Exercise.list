@@ -39,9 +39,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_line   0000a726  00000000  00000000  0004175e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00082136  00000000  00000000  0004be84  2**0
+ 18 .debug_str    00082137  00000000  00000000  0004be84  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000cdfba  2**0
+ 19 .comment      00000053  00000000  00000000  000cdfbb  2**0
                   CONTENTS, READONLY
  20 .debug_frame  00002750  00000000  00000000  000ce010  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -135,8 +135,8 @@ int main(void)
  8000182:	210a      	movs	r1, #10
  8000184:	2000      	movs	r0, #0
  8000186:	f000 f9df 	bl	8000548 <setTimer>
-		  Ex9_run();
- 800018a:	f000 f927 	bl	80003dc <Ex9_run>
+		  Ex10_run();
+ 800018a:	f000 f927 	bl	80003dc <Ex10_run>
 	  }
 	  if(isTimerExpired(1)==1){
  800018e:	2001      	movs	r0, #1
@@ -552,28 +552,28 @@ const int MAX_LED_MATRIX = 8;
  80003d4:	20000008 	.word	0x20000008
  80003d8:	40010c00 	.word	0x40010c00
 
-080003dc <Ex9_run>:
+080003dc <Ex10_run>:
  		uint8_t temp = (matrix_buffer[i] & 0x01) ? 0x80 : 0;
  	         matrix_buffer[i] >>= 1;
  	         matrix_buffer[i] |= temp;
  	     }
     }
- void Ex9_run(){
+ void Ex10_run(){
  80003dc:	b580      	push	{r7, lr}
  80003de:	af00      	add	r7, sp, #0
 	 if(index_led_matrix>=8) index_led_matrix=0;
- 80003e0:	4b08      	ldr	r3, [pc, #32]	; (8000404 <Ex9_run+0x28>)
+ 80003e0:	4b08      	ldr	r3, [pc, #32]	; (8000404 <Ex10_run+0x28>)
  80003e2:	681b      	ldr	r3, [r3, #0]
  80003e4:	2b07      	cmp	r3, #7
- 80003e6:	dd02      	ble.n	80003ee <Ex9_run+0x12>
- 80003e8:	4b06      	ldr	r3, [pc, #24]	; (8000404 <Ex9_run+0x28>)
+ 80003e6:	dd02      	ble.n	80003ee <Ex10_run+0x12>
+ 80003e8:	4b06      	ldr	r3, [pc, #24]	; (8000404 <Ex10_run+0x28>)
  80003ea:	2200      	movs	r2, #0
  80003ec:	601a      	str	r2, [r3, #0]
 	 updateLEDMatrix(index_led_matrix++);
- 80003ee:	4b05      	ldr	r3, [pc, #20]	; (8000404 <Ex9_run+0x28>)
+ 80003ee:	4b05      	ldr	r3, [pc, #20]	; (8000404 <Ex10_run+0x28>)
  80003f0:	681b      	ldr	r3, [r3, #0]
  80003f2:	1c5a      	adds	r2, r3, #1
- 80003f4:	4903      	ldr	r1, [pc, #12]	; (8000404 <Ex9_run+0x28>)
+ 80003f4:	4903      	ldr	r1, [pc, #12]	; (8000404 <Ex10_run+0x28>)
  80003f6:	600a      	str	r2, [r1, #0]
  80003f8:	4618      	mov	r0, r3
  80003fa:	f000 f805 	bl	8000408 <updateLEDMatrix>

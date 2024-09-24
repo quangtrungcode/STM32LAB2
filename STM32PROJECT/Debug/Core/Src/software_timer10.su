@@ -3,7 +3,7 @@ software_timer10.c:22:7:shiftColLeft	16	static
 software_timer10.c:28:7:shiftColRight	16	static
 software_timer10.c:34:7:shiftRowUp	16	static
 software_timer10.c:41:7:shiftRowDown	16	static
-software_timer10.c:48:7:Ex9_run	8	static
+software_timer10.c:48:7:Ex10_run	8	static
 software_timer10.c:52:7:updateLEDMatrix	16	static
 software_timer10.c:103:6:setTimer	16	static
 software_timer10.c:108:5:isTimerExpired	16	static

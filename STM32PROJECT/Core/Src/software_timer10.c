@@ -45,7 +45,7 @@ const int MAX_LED_MATRIX = 8;
  	         matrix_buffer[i] |= temp;
  	     }
     }
- void Ex9_run(){
+ void Ex10_run(){
 	 if(index_led_matrix>=8) index_led_matrix=0;
 	 updateLEDMatrix(index_led_matrix++);
  }
