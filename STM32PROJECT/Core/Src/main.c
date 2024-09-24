@@ -91,7 +91,6 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT (& htim2 ) ;
   setTimer(0, 10);
- // setTimer(1, 80);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -100,15 +99,8 @@ int main(void)
   {
 	  if(isTimerExpired(0)==1){
 		  setTimer(0, 10);
-		  Ex9_run();
+		  Ex10_run();
 	  }
-//	  if(isTimerExpired(1)==1){
-//	  		setTimer(1, 80);
-////	  		shiftColLeft();
-////	  		shiftColRight();
-////	  		shiftRowUp();
-////	  		shiftRowDown();
-//	  	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -211,7 +203,7 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, ENM0_Pin|ENM1_Pin|ENM2_Pin|ENM3_Pin
-                          |ENM4_Pin|ENM5_Pin|ENM6_Pin|ENM7_Pin, GPIO_PIN_RESET);
+                          |ENM4_Pin|ENM5_Pin|ENM6_Pin|ENM7_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, ROW2_Pin|ROW3_Pin|ROW4_Pin|ROW5_Pin

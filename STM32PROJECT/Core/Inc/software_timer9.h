@@ -5,17 +5,17 @@
  *      Author: ADMIN
  */
 
-#ifndef INC_SOFTWARE_TIMER9_H_
-#define INC_SOFTWARE_TIMER9_H_
+#ifndef INC_SOFTWARE_TIMER10_H_
+#define INC_SOFTWARE_TIMER10_H_
 
-#define LED_Pins (ROW0_Pin|ROW1_Pin|ROW2_Pin|ROW3_Pin|ROW4_Pin|ROW5_Pin|ROW6_Pin|ROW7_Pin)
+
+#define LED_Pins (ENM0_Pin|ENM1_Pin|ENM2_Pin|ENM3_Pin|ENM4_Pin|ENM5_Pin|ENM6_Pin|ENM7_Pin)
 #include "main.h"
 void setTimer(int index, int value);
 int isTimerExpired(int index);
 
 void timerRun();
-void displayMatrix(uint8_t num);
-void Ex9_run();
 void updateLEDMatrix (int index );
-
-#endif /* INC_SOFTWARE_TIMER9_H_ */
+void Ex10_run();
+void displayMatrix(uint8_t num);
+#endif /* INC_SOFTWARE_TIMER10_H_ */

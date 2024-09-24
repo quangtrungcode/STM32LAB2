@@ -19,8 +19,7 @@ const int MAX_LED_MATRIX = 8;
 		 HAL_GPIO_WritePin(GPIOB, segmentPins[i], (num&(0x80>>i))?SET:RESET);
 	 }
  }
-
- void Ex9_run(){
+ void Ex10_run(){
 	 if(index_led_matrix>=8) index_led_matrix=0;
 	 updateLEDMatrix(index_led_matrix++);
  }
