@@ -4,7 +4,7 @@
  *  Created on: 21 thg 9, 2024
  *      Author: ADMIN
  */
-#include "software_timer9.h"
+#include "software_timer10.h"
 #define MAX_COUNTER 10
 #define TIMER_TICK 10
 
