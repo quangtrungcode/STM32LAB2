@@ -90,18 +90,25 @@ int main(void)
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT (& htim2 ) ;
-  setTimer(0,500);
+  setTimer(0, 10);
+ // setTimer(1, 80);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-
 	  if(isTimerExpired(0)==1){
-		  setTimer(0, 500);
+		  setTimer(0, 10);
 		  Ex9_run();
 	  }
+//	  if(isTimerExpired(1)==1){
+//	  		setTimer(1, 80);
+////	  		shiftColLeft();
+////	  		shiftColRight();
+////	  		shiftRowUp();
+////	  		shiftRowDown();
+//	  	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -232,8 +239,8 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback ( TIM_HandleTypeDef * htim ){
-   timerRun();
- }
+  timerRun();
+}
 /* USER CODE END 4 */
 
 /**
