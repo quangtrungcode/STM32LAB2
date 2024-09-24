@@ -99,7 +99,7 @@ int main(void)
   {
 	  if(isTimerExpired(0)==1){
 		  setTimer(0, 10);
-		  Ex10_run();
+		  Ex9_run();
 	  }
     /* USER CODE END WHILE */
 

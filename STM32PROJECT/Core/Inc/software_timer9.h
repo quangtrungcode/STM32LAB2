@@ -16,6 +16,6 @@ int isTimerExpired(int index);
 
 void timerRun();
 void updateLEDMatrix (int index );
-void Ex10_run();
+void Ex9_run();
 void displayMatrix(uint8_t num);
 #endif /* INC_SOFTWARE_TIMER10_H_ */

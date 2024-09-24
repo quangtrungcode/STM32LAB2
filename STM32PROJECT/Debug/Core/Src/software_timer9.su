@@ -1,5 +1,5 @@
 software_timer9.c:17:7:displayMatrix	24	static
-software_timer9.c:22:7:Ex10_run	8	static
+software_timer9.c:22:7:Ex9_run	8	static
 software_timer9.c:26:7:updateLEDMatrix	16	static
 software_timer9.c:77:6:setTimer	16	static
 software_timer9.c:82:5:isTimerExpired	16	static
