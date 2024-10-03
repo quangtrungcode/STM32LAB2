@@ -17,7 +17,5 @@ void update7SEG ( int index );
 void Ex4_run();
 void timerRun();
 
-void updateClockBuffer ();
-void Ex5_run();
 
 #endif /* INC_SOFTWARE_TIMER4_H_ */

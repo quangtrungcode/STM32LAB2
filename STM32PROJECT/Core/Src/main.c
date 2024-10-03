@@ -92,7 +92,6 @@ int main(void)
   HAL_TIM_Base_Start_IT (& htim2 ) ;
   setTimer(0, 250);
   setTimer(1, 1000);
-  setTimer(2, 1000);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -103,10 +102,6 @@ int main(void)
 	 	  	setTimer(0, 250);
 	 	  	Ex4_run();
 	 }
-	  if(isTimerExpired(2)==1){
-	  	  	  	  	setTimer(2, 1000);
-	  	  	  	  	Ex5_run();
-	  	  	  }
 	  if(isTimerExpired(1)==1){
 	 	  	setTimer(1, 1000);
 	 	  	led_blinky();
