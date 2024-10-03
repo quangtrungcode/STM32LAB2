@@ -101,15 +101,15 @@ int main(void)
   {
 	  if(isTimerExpired(0)==1){
 	  	 	  	setTimer(0, 250);
-	  	 	  	Ex4_run();
+	  	 	  	scan_7LED();
 	  	 }
-	  	  if(isTimerExpired(1)==1){
-	  	 	  	setTimer(1, 1000);
-	  	 	  	led_blinky();
-	  	 }
+	  	if(isTimerExpired(1)==1){
+	  		  	setTimer(1, 1000);
+	  		  	Ex5_run();
+	  	}
 	  	if(isTimerExpired(2)==1){
 	  		  	setTimer(2, 1000);
-	  		  	Ex5_run();
+	  		  	led_blinky();
 	  	}
 
     /* USER CODE END WHILE */

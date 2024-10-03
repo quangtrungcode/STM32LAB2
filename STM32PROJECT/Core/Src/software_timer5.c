@@ -21,7 +21,7 @@ const int MAX_LED = 4;
  	led_buffer[0]=hour/10;
  	led_buffer[1]=hour%10;
  	led_buffer[2]=minute/10;
- 	led_buffer[3]=minute % 10;
+ 	led_buffer[3]=minute%10;
  }
  void Ex5_run(){
  	second ++;
@@ -108,7 +108,7 @@ const int MAX_LED = 4;
  	if(counter<=1) HAL_GPIO_WritePin(DOT_GPIO_Port,DOT_Pin , RESET);
  	else HAL_GPIO_WritePin(DOT_GPIO_Port,DOT_Pin , SET);
  }
-void Ex4_run(){
+void scan_7LED(){
 	if(index_led>=MAX_LED) {
 		index_led=0;
 	}

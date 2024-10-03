@@ -17,7 +17,7 @@ void timerRun();
 void led_blinky();
 void display7SEG(int num);
 void update7SEG ( int index );
-void Ex4_run();
+void scan_7LED();
 void updateClockBuffer ();
 void Ex5_run();
 
