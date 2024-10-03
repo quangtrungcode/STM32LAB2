@@ -8,12 +8,36 @@
 #define MAX_COUNTER 10
 #define TIMER_TICK 10
 
+int hour = 15 , minute = 8 , second = 50;
 int timer_counter[MAX_COUNTER];
 int timer_flag[MAX_COUNTER];
 int counter=0;
 const int MAX_LED = 4;
  int index_led = 0;
- int led_buffer [4] = {1 , 2 , 3 , 4};
+ int led_buffer [4] = {1 , 5 , 0 , 8};
+
+ void updateClockBuffer (){
+ 	led_buffer[0]=hour/10;
+ 	led_buffer[1]=hour%10;
+ 	led_buffer[2]=minute/10;
+ 	led_buffer[3]=minute%10;
+ }
+ void Ex5_run(){
+ 	second ++;
+ 	 if ( second >= 60) {
+ 		 second = 0;
+ 		 minute ++;
+ 	}
+ 	if( minute >= 60) {
+ 		 minute = 0;
+ 		 hour ++;
+ 	}
+ 	if( hour >=24) {
+ 		 hour = 0;
+ 	}
+ 	updateClockBuffer () ;
+ 	//HAL_Delay (1000) ;
+ }
 
  void display7SEG(int num) {
        const uint8_t segmentMap[10] = {
