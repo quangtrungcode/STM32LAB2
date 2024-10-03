@@ -1,0 +1,9 @@
+software_timer5.c:20:7:updateClockBuffer	4	static
+software_timer5.c:26:7:Ex5_run	8	static
+software_timer5.c:42:7:display7SEG	32	static
+software_timer5.c:63:7:update7SEG	16	static
+software_timer5.c:105:7:led_blinky	8	static
+software_timer5.c:111:6:Ex4_run	8	static
+software_timer5.c:119:6:setTimer	16	static
+software_timer5.c:124:5:isTimerExpired	16	static
+software_timer5.c:132:6:timerRun	16	static
